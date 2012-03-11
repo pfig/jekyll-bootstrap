@@ -121,6 +121,13 @@ task :lessc do
   end
 end # task :lessc
 
+# Lifted from Octopress
+desc "Generate jekyll site"
+task :generate do
+  puts "## Generating Site with Jekyll"
+  system "jekyll --no-auto"
+end # task :generate
+
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
